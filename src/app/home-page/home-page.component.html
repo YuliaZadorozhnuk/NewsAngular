@@ -1,0 +1,54 @@
+<button
+  *ngIf="authorizationService.isAuthorization()"
+  type="button" class="btn but3" routerLink="/create-news">Добавить<br>новость</button>
+<div class="container p-2">
+  <div class="card-columns">
+    <div *ngFor="let card of cards" class="w-20">
+      <div class="card shadow-lg card1">
+        <h5 class="card-title text-center p-1">{{ card.title }}</h5>
+        <img class="card-img-top p-1" src="{{ card.image }}" style="height:100%; width:100%;" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text w-100 p-1">{{ card.content }}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Время публикации: {{ card.date }}</small>
+        </div>
+        <div class="btn-group btn-block but1" role="group" aria-label="Basic example">
+          <button
+            *ngIf="authorizationService.isAuthorization()"
+            (click)="editCard(editModal, card)"
+            type="button" class="btn btn-light btn-secondary but2">Редактировать</button>
+          <button
+            *ngIf="authorizationService.isAuthorization()"
+            (click)="deleteCard(card.id)"
+            type="button" class="btn btn-light btn-secondary but2">Удалить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #editModal>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Редактирование новости № {{ tempCard.id }}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="card shadow-lg p-3 ">
+    <img class="card-img-top" src="{{ tempCard.image }}" style="height:200px; width:200px;" alt="Card image cap">
+    <input type="text" class="form-control input-group mb-3" [(ngModel)]="tempCard.image">
+    <div class="card-body">
+      <input type="text" class="form-control input-group mb-3" [(ngModel)]="tempCard.title">
+      <textarea [(ngModel)]="tempCard.content"
+        type="text" class="form-control" placeholder="Контент" aria-label="Content"
+        aria-describedby="basic-addon3"></textarea>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Время публикации: {{ tempCard.date }}</small>
+    </div>
+    <button
+      (click)="saveCard(tempCard)"
+      type="button" class="btn but4">Сохранить</button>
+  </div>
+</ng-template>

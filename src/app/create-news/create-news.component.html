@@ -1,0 +1,30 @@
+<button type="button" class="btn but2" routerLink="/">Назад</button>
+<div class="container">
+  <p class="text1">Добавьте новую новость:</p>
+  <div class="card shadow-lg p-3 card1">
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <input [(ngModel)]="newCard.title"
+          type="text" class="form-control" placeholder="Заголовок" aria-label="Title" aria-describedby="basic-addon2">
+      </div>
+      <div class="input-group mb-3">
+        <input [(ngModel)]="newCard.image"
+          type="text" class="form-control" placeholder="Картинка" aria-label="Image" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <textarea [(ngModel)]="newCard.content"
+          type="text" class="form-control" placeholder="Контент" aria-label="Content"
+          aria-describedby="basic-addon3"></textarea>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="input-group mb-3">
+        <input [(ngModel)]="newCard.date"
+          type="text" class="form-control" placeholder="Дата" aria-label="Date" aria-describedby="basic-addon4" disabled>
+      </div>
+    </div>
+    <button
+      (click)="createNewCard()"
+      type="button" class="btn btn-light but1">Сохранить</button>
+  </div>
+</div>

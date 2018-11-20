@@ -1,0 +1,35 @@
+.but1 {
+  position: absolute;
+  right: 16px;
+  top: 85px;
+  background: #fb8d68;
+  color: white;
+  font-size: 18px;
+}
+
+.but1:hover {
+  background: #fb6e4a;
+}
+
+.bl1 {
+  border: solid;
+  border-color: #fb8d68;
+  border-radius: 10px;
+  padding: 20px;
+  position: absolute;
+  left: 400px;
+  top: 160px;
+  width: 540px;
+}
+
+.but2 {
+  background: #fb8d68;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  width: 100%;
+}
+
+.but2:hover {
+  background: #fb6e4a;
+}

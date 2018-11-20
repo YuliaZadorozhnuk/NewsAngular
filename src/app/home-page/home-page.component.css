@@ -1,0 +1,49 @@
+.text1 {
+  width: 100%;
+  word-wrap: normal;
+}
+
+.but1 {
+  padding: 5px;
+}
+
+.but2 {
+  background: #fb8d68;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  width: 100%;
+}
+
+.but2:hover {
+  background: #fb6e4a;
+}
+
+.card1 {
+  border: solid 2px;
+  background: #FFF8DC;
+  border-color: #fb8d68;
+}
+
+.but3 {
+  position: absolute;
+  right: 16px;
+  top: 85px;
+  background: #fb8d68;
+  color: white;
+  font-size: 13px;
+}
+
+.but3:hover {
+  background: #fb6e4a;
+}
+
+.but4 {
+  background: #fb8d68;
+  color: white;
+  padding: 5px;
+}
+
+.but4:hover {
+  background: #fb6e4a;
+}

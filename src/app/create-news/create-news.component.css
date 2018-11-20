@@ -1,0 +1,42 @@
+.text1 {
+  position: absolute;
+  left: 420px;
+  top: 90px;
+  color: #fb6e4a;
+  font-size: 45px;
+}
+
+.card1 {
+  position: relative;
+  top: 110px;
+  left: 350px;
+  width: 400px;
+  height: 400px;
+  border: solid;
+  border-color: #fb8d68;
+  border-radius: 10px;
+}
+
+.but1 {
+  left: 470px;
+  background: #fb8d68;
+  color: white;
+  font-size: 18px;
+}
+
+.but1:hover {
+  background: #fb6e4a;
+}
+
+.but2 {
+  position: absolute;
+  right: 18px;
+  top: 85px;
+  background: #fb8d68;
+  color: white;
+  font-size: 18px;
+}
+
+.but2:hover {
+  background: #fb6e4a;
+}

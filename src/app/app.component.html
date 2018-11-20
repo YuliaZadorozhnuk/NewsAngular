@@ -1,0 +1,16 @@
+<nav class="navbar nav1">
+  <a class="navbar-brand nav2" routerLink="/">Новости</a>
+  <form class="form-inline">
+    <button
+      *ngIf="!authorizationService.isAuthorization()"
+      class="btn btn-outline-light my-2 my-sm-0 but1" type="submit" routerLink="/authorization">Войти</button>
+    <button
+      *ngIf="authorizationService.isAuthorization()"
+      (click)="authorizationService.logOut()"
+      class="btn btn-outline-light my-2 my-sm-0 but1" type="submit">Выйти</button>
+  </form>
+</nav>
+
+<body>
+  <router-outlet></router-outlet>
+</body>
